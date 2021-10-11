@@ -1,9 +1,6 @@
-
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../constraints/index.js";
-
-
 
 function CustomergroupInfo() {
     const [customergroup, setCustomergroup] = useState(null);
@@ -27,8 +24,7 @@ function CustomergroupInfo() {
           <>
           <p> {customergroup.party} </p>
           <p>{customergroup.partyquantity} </p>
-          <p>{customergroup.customerstatus}</p>
-          
+          <p>{customergroup.customerstatus}</p>  
           </>
       )}
       </div>
