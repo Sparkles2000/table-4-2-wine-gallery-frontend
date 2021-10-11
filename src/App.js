@@ -6,8 +6,8 @@ import CustomergroupContainer from './Components/Customergroup/CustomergroupCont
 import CustomergroupInfo from './Components/Customergroup/CustomergroupInfo';
 import BrandofwineContainer from './Components/Brandofwine/BrandofwineContainer';
 import BrandofwineInfo from './Components/Brandofwine/BrandofwineInfo';
-// import ArtsessionContainer from './Components/Artsession/ArtsessionContainer';
-// import ArtsessionInfo from './Components/Artsession/ArtsessionInfo';
+import ArtsessionContainer from './Components/Artsession/ArtsessionContainer';
+import ArtsessionInfo from './Components/Artsession/ArtsessionInfo';
 // import ArtpieceContainer from './Components/ArtPiece/ArtpieceContainer;
 // import ArtpieceInfo from './Components/ArtPiece/ArtpieceInfo;
 // import WinepurchaseContainer from './Components/Winepurchase/WinpurchaseContainer;
@@ -40,13 +40,13 @@ function App() {
         <Route path="/brandofwines/:id">
         <BrandofwineInfo />
         </Route>
-        {/* <Route exact path="/artsessions">
+        <Route exact path="/artsessions">
         <ArtsessionContainer />
         </Route>
         <Route path="/artsessions/:id">
         <ArtsessionInfo />
         </Route>
-        <Route exact path="/artpieces">
+        {/*<Route exact path="/artpieces">
         <ArtpieceContainer />
         </Route>
         <Route path="/artpieces/:id">
