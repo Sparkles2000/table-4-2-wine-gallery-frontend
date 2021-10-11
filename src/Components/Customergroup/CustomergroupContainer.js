@@ -30,6 +30,7 @@ useEffect(() => {
       <Customergroup customergroup={customergroup} updateCustomergroup={updateCustomergroup} deleteCustomergroup={deleteCustomergroup} key={customergroup.id} />
     ));
   }
+  
   function createCustomergroup(customergroup) {
     fetch(BASE_URL + "Customergroups", {
       method: "POST",
