@@ -57,7 +57,7 @@ Any Session Basic<br/>
 Your choice of wine $10 and below and a session. Every session comes with wine.<br/>
 Wine<br/>
 Any wine. Price will vary according to the brand and type.</p>
-      <Link className="about-link" to="/brandofwines">Show Me More!</Link>
+      <Link className="About-link" to="/brandofwines">Show Me More!</Link>
     </div>
   )
  }

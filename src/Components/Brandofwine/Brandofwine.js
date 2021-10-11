@@ -54,12 +54,8 @@ return(
     <Link to={`/brandofwines/${brandofwine.id}`}>
         <p>Brand Name: {brandofwine.brand}</p>
       </Link>
-      <p>Aged Since: {brandofwine.age}</p>
-      <p>wine Type: {brandofwine.winetype}</p>
-      <p>Price:  {brandofwine.price}</p>
-      <p>Dry or Sweet: {brandofwine.drysweet}</p>
-      <p>Alcohol Content: {brandofwine.drysweet}</p>
-      <p>Wine Image: {brandofwine.img_url}</p>
+      <p>Aged Since: {brandofwine.age} wine Type: {brandofwine.winetype} Price:  {brandofwine.price} Dry or Sweet: {brandofwine.drysweet} Alcohol Content: {brandofwine.drysweet}</p>
+      <img src={brandofwine.img_src} alt={`${brandofwine.img_src}`} width="90%"/>
       {editMode && (
         <>
           <button onClick={() => deleteBrandofwine(brandofwine)}>Delete</button>
@@ -71,7 +67,7 @@ return(
             <input name="price" value={newBrandofwine.drysweet} onChange={handleChange} />
             <input name="drysweet" value={newBrandofwine.drysweet} onChange={handleChange} />
             <input name="alcoholcontent" value={newBrandofwine.alcoholcontent} onChange={handleChange} />
-            <input name="img_url" value={newBrandofwine.img_url} onChange={handleChange} />
+            <input name="img_src" value={newBrandofwine.img_src} onChange={handleChange} />
             <button type="submit">Update</button>
           </form>
         </>
@@ -82,5 +78,4 @@ return(
   );
 
 }
-
 export default Brandofwine;

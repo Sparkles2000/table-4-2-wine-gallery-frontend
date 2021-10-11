@@ -28,3 +28,12 @@ a:-webkit-any-link {
   scrollbar-arrow-color: blueviolet;
   padding: 2%;
 }
+
+a:-webkit-any-link:hover {
+  font-size: 1.7rem;
+  color: rgb(150, 9, 68);
+}
+
+h {
+  text-align: center;
+}

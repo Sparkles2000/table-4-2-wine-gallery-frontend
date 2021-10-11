@@ -10,7 +10,7 @@ const useFetch = (url) => {
     fetch(url)
       .then(res => {
           if (!res.ok) {
-              throw Error('could not fetch customer groups');
+              throw Error('could not fetch search request');
           }
           return res.json();
         })
@@ -20,7 +20,7 @@ const useFetch = (url) => {
           setError(null);
       }) 
       .catch(error => {
-          console.error('Trouble getting user');
+          console.error('Sorry there is a problem with this fetch request');
 
           setIsPending(false);
           setError(error.message);

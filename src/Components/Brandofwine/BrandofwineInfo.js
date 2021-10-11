@@ -18,21 +18,11 @@ function BrandofwineInfo() {
     }, [brandofwine]);
 
         return (
-            <div>
+            <div className="brandofwine-card">
             {brandofwine && (
               <>
-                <p>Brand Name: {brandofwine.brand}</p>
-                <p>Aged Since: {brandofwine.age}</p>
-                <p>Wine Type: {brandofwine.winetype}</p>
-                <p>Price: {brandofwine.price}</p>
-                <p>Dry Or Sweet: {brandofwine.drysweet}</p>
-                <p>Alcohol Content: {brandofwine.alcoholcontent}</p>
-                <p>Wine Image: {brandofwine.img_url}</p>
-                
-                <div className="card-container">
-            
-                </div>
-                
+                <p>Brand Name: {brandofwine.brand}, Aged Since: {brandofwine.age}, Wine Type: {brandofwine.winetype}, Price: {brandofwine.price}, Dry Or Sweet: {brandofwine.drysweet}, Alcohol Content: {brandofwine.alcoholcontent}</p>
+                <img className="brandofwine-info-image" src={brandofwine.img_src} alt={`${brandofwine.img_src}`} width="90%"/>
               </>
             )}
           </div>

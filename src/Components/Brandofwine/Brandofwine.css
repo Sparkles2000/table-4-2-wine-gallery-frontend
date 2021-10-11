@@ -1,0 +1,70 @@
+.brandofwine {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    line-height: 1.5;
+    border: 1px solid rgb(white);
+  }
+  .brandofwine-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .brandofwine-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .form-label {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    color: white;
+    margin: 15px;
+    margin-right: 5px;
+    padding: 1%;
+  }
+  
+  .brandofwine-form input {
+    margin-left: 5px;
+  }
+  
+  .brandofwine-form button {
+    padding: 0px 5px;
+  }
+
+.brandofwine-form-img {
+  display: flex;
+  align-items: center;
+}
+
+.brandofwine-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+  }
+  
+  .brandofwine-info-heading {
+    font-size: 2rem;
+  }
+  
+  .brandofwine-info-img {
+    max-width: 400px;
+    margin: 1.5rem;
+  }
+
+  h {
+    text-align: center;
+  }
+
+  p {
+      padding: 1%;
+  }

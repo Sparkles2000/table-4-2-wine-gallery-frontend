@@ -4,7 +4,6 @@ import {BASE_URL} from  "../constraints/index.js";
 import Customergroup from './Customergroup';
 import CustomergroupForm from './CustomergroupForm';
 
-
 function CustomergroupContainer() {
     const [customergroups, setCustomergroups] = useState([]);
 
@@ -30,7 +29,7 @@ useEffect(() => {
       <Customergroup customergroup={customergroup} updateCustomergroup={updateCustomergroup} deleteCustomergroup={deleteCustomergroup} key={customergroup.id} />
     ));
   }
-  
+
   function createCustomergroup(customergroup) {
     fetch(BASE_URL + "Customergroups", {
       method: "POST",
@@ -42,10 +41,7 @@ useEffect(() => {
     })
       .then((res) => res.json())
       .then((json) => setCustomergroups([...customergroups, json]));
-
   }
-
-  //  UPDATE
        
   function updateCustomergroup(customergroup) {
     fetch(BASE_URL + "customergroups/" + customergroup.id, {
@@ -78,11 +74,9 @@ setCustomergroups(newCustomergroups);
     return (
             <div>
             <h2 className="customergroups-header">Customer Group</h2>
-            <h2>Create Your Account Below</h2>
-              
+            <h2>Create Your Account Below</h2>  
             <p>The Perfect Getaway For The Day!</p>
             <div className="customergroupForm">
-  
             <CustomergroupForm createCustomergroup={createCustomergroup} />
             </div>
             <div className="customergroups-container">{customergroups && populateCustomergroups()}</div>
