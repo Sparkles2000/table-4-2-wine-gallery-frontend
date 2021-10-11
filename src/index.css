@@ -1,8 +1,17 @@
+div.container {
+  background-color: #5e171b;
+  padding: 2%;
+  text-decoration-color: violet;
+  }
+.link {
+  color:violet;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  font-weight: bolder;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +19,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  font-weight: bolder;
+}
+
+a:-webkit-any-link {
+  color: violet;
+  cursor: pointer;
+  -moz-text-decoration-color: purple;
+  padding: 2%;
 }
