@@ -21,7 +21,7 @@ function CustomergroupForm({createCustomergroup}) {
     return (
         <div>
             
-            <form onSubmit={ handleSubmit } className="user-form">
+            <form onSubmit={ handleSubmit } className="customergroup-form">
   
   <label className='form-label'>Party</label>
   <input type="text" placeholder='Party' required value={ party }onChange={(e) => setParty(e.target.value)} />
