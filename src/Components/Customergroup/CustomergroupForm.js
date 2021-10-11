@@ -1,22 +1,17 @@
 // import { useHistory } from "react-router-dom";
 import { useState } from "react";
 
-
-
-
 function CustomergroupForm({createCustomergroup}) {
 
     const [party, setParty] = useState("");
     const [partyquantity, setPartyquantity] = useState("");
     const [customerstatus, setCustomerstatus] = useState("");
     const customergroup = {party, partyquantity, customerstatus};
-
   
     const handleSubmit = (e) => {
         e.preventDefault();
         createCustomergroup(customergroup)
     }
-
 
     return (
         <div>
@@ -34,9 +29,7 @@ function CustomergroupForm({createCustomergroup}) {
 
 <button>Submit</button>
 <br />
-<p>Party: { party }</p>
-<p>Party Quantity { partyquantity }</p>
-<p>Customer Status: { customerstatus }</p>
+<p>Party: { party }, Party Quantity: { partyquantity }, Customer Status: { customerstatus }</p>
 </form>          
 </div>
     );

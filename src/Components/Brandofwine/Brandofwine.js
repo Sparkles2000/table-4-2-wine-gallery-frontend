@@ -1,9 +1,3 @@
-// import React from 'react';
-// import { useEffect, useState } from 'react';
-// import {BASE_URL} from  "../../constraints/index.js";
-// import Brandofwine from './Brandofwine';
-// import BrandofwineForm from './BrandofwineForm';
-
 import React from 'react';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -34,8 +28,6 @@ function Brandofwine({brandofwine, updateBrandofwine, deleteBrandofwine, initial
         setEditMode(!editMode);
       }
 
-   
-    
     function handleUpdate(e) {
        e.preventDefault();
        updateBrandofwine(newBrandofwine);
@@ -48,9 +40,7 @@ function Brandofwine({brandofwine, updateBrandofwine, deleteBrandofwine, initial
 
 return(
   <div className="branofwine-container">
-
     <div className="brandofwine-card">
-      
     <Link to={`/brandofwines/${brandofwine.id}`}>
         <p>Brand Name: {brandofwine.brand}</p>
       </Link>

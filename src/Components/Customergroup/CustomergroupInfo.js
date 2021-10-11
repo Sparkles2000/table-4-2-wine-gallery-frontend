@@ -17,14 +17,11 @@ function CustomergroupInfo() {
         console.log(customergroup);
     }, [customergroup]);
     
-  
     return (
       <div>
           {customergroup && (
           <>
-          <p> {customergroup.party} </p>
-          <p>{customergroup.partyquantity} </p>
-          <p>{customergroup.customerstatus}</p>  
+          <p> {customergroup.party}, {customergroup.partyquantity}, {customergroup.customerstatus}</p>  
           </>
       )}
       </div>
@@ -32,4 +29,4 @@ function CustomergroupInfo() {
       );
   
   }
-  export default CustomergroupInfo
+  export default CustomergroupInfo;

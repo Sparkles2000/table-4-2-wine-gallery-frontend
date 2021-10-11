@@ -27,8 +27,6 @@ function Customergroup({customergroup, updateCustomergroup, deleteCustomergroup,
         setEditMode(!editMode);
       }
 
-   
-    
     function handleUpdate(e) {
        e.preventDefault();
        updateCustomergroup(newCustomergroup);
@@ -41,14 +39,11 @@ function Customergroup({customergroup, updateCustomergroup, deleteCustomergroup,
 
 return(
   <div className="customergroup-container">
-
-    <div className="customergroup-card">
-      
+    <div className="customergroup-card">  
     <Link to={`/customergroups/${customergroup.id}`}>
         <p>Customer Group Party: {customergroup.party}</p>
       </Link>
-      <p>Party Quantity:  {customergroup.partyquantity} </p>
-      <p>Customer Status: {customergroup.customerstatus}</p>
+      <p>Party Quantity:  {customergroup.partyquantity}, Customer Status: {customergroup.customerstatus}</p>
       {editMode && (
         <>
           <button onClick={() => deleteCustomergroup(customergroup)}>Delete</button>

@@ -26,8 +26,8 @@ useEffect(() => {
     function populateBrandofwines() {
         console.log(brandofwines);
         return brandofwines.map((brandofwine, idx) => (
-        <Brandofwine brandofwine={brandofwine} updateBrandofwine={updateBrandofwine} deleteBrandofwine={deleteBrandofwine} key={brandofwine.id} />
-    ));
+            <Brandofwine brandofwine={brandofwine} updateBrandofwine={updateBrandofwine} deleteBrandofwine={deleteBrandofwine} key={brandofwine.id} />
+        ));
     }
 
     function createBrandofwine(brandofwine) {

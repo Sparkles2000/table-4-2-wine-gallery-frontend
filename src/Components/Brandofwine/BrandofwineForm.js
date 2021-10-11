@@ -1,9 +1,6 @@
 // import { useHistory } from "react-router-dom";
 import { useState } from "react";
 
-
-
-
 function BrandofwineForm({createBrandofwine}) {
 
     const [brand, setBrand] = useState("");
@@ -15,16 +12,10 @@ function BrandofwineForm({createBrandofwine}) {
     const [img_src, setImg_src] = useState("");
     const brandofwine = {brand, age, winetype, price, drysweet, alcoholcontent, img_src};
 
-  
     const handleSubmit = (e) => {
         e.preventDefault();
         createBrandofwine(brandofwine)
-
-
-   
-
     }
-
 
     return (
         <div>

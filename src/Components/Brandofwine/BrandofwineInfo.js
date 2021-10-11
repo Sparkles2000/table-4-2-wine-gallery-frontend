@@ -12,6 +12,8 @@ function BrandofwineInfo() {
         .then((res) => res.json())
         .then((json) => setbrandofwine(json));
     }, [id]);
+
+    
   
     useEffect(() => {
         console.log(brandofwine);
