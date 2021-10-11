@@ -25,6 +25,6 @@ code {
 a:-webkit-any-link {
   color: violet;
   cursor: pointer;
-  -moz-text-decoration-color: purple;
+  scrollbar-arrow-color: blueviolet;
   padding: 2%;
 }

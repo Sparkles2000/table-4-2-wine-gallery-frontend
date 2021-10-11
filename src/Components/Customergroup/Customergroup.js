@@ -47,7 +47,6 @@ return(
     <Link to={`/customergroups/${customergroup.id}`}>
         <p>Customer Group Party: {customergroup.party}</p>
       </Link>
-      <p>Party: {customergroup.party}</p>
       <p>Party Quantity:  {customergroup.partyquantity} </p>
       <p>Customer Status: {customergroup.customerstatus}</p>
       {editMode && (
