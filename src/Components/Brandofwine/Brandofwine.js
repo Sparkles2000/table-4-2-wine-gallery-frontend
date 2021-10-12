@@ -57,7 +57,7 @@ return(
             <input name="price" value={newBrandofwine.drysweet} onChange={handleChange} />
             <input name="drysweet" value={newBrandofwine.drysweet} onChange={handleChange} />
             <input name="alcoholcontent" value={newBrandofwine.alcoholcontent} onChange={handleChange} />
-            <input name="img_src" value={newBrandofwine.img_src} onChange={handleChange} />
+            <input name="image" value={newBrandofwine.img_src} onChange={handleChange} />
             <button type="submit">Update</button>
           </form>
         </>

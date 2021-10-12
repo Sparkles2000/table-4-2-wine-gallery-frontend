@@ -31,7 +31,7 @@ function App() {
         <Route exact path="/customergroups">
         <CustomergroupContainer />
         </Route>
-        <Route exact path="/customergroups/:id">
+        <Route path="/customergroups/:id">
         <CustomergroupInfo />
         </Route>
         <Route exact path="/brandofwines">

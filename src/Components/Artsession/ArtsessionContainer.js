@@ -1,8 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import {BASE_URL} from  "../constraints/index.js";
-import artsession from './artsession';
-import artsessionForm from './artsessionForm';
+import Artsession from './Artsession';
+import ArtsessionForm from './ArtsessionForm';
 
 function ArtsessionContainer() {
     const [artsessions, setArtsessions] = useState([]);
@@ -26,7 +26,7 @@ useEffect(() => {
   function populateArtsessions() {
     console.log(artsessions);
     return artsessions.map((artsession, idx) => (
-      <artsession artsession={artsession} updateArtsession={updateArtsession} deleteArtsession={deleteArtsession} key={artsession.id} />
+      <Artsession artsession={artsession} updateArtsession={updateArtsession} key={artsession.id} />
     ));
   }
 
@@ -62,15 +62,7 @@ useEffect(() => {
     });
     setArtsessions(newArtsessions);
     }
-
-function deleteArtsession(artsession) {
-    fetch(BASE_URL + "artsessions/" + artsession.id, {
-      method: "DELETE",
-    });
-    const newArtsessions = artsessions.filter((a) => a.id !== artsession.id);
-setArtsessions(newArtsessions);
- }
-
+    
     return (
             <div>
             <h2 className="artsessions-header">Customer Group</h2>

@@ -46,8 +46,6 @@ return(
       <p>Price: {artsession.price}, Session Type: {artsession.sessiontype}, Pieces Painted: {artsession.piecespergroup}</p>
       {editMode && (
         <>
-          <button onClick={() => deleteArtsession(artsession)}>Delete</button>
-
           <form onSubmit={handleUpdate}>
             <input name="artstyle" value={newArtsession.artstyle} onChange={handleChange} />
             <input name="price" value={newArtsession.price} onChange={handleChange} />
