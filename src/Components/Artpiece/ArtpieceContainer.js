@@ -1,17 +1,17 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import {BASE_URL} from  "../constraints/index.js";
-// import Artpiece from './Artpiece';
-// import ArtpieceForm from './ArtpieceForm';
+import Artpiece from './Artpiece';
+import ArtpieceForm from './ArtpieceForm';
 
 function ArtpieceContainer() {
-    const [Artpieces, setArtpieces] = useState([]);
+    const [artpieces, setArtpieces] = useState([]);
 
 useEffect(() => {
-    fetch(BASE_URL + "Artpieces")
+    fetch(BASE_URL + "artpieces")
       .then(res => {
           if (!res.ok) {
-              throw Error('could not fetch Artpiece');
+              throw Error('could not fetch artpiece');
           }
           return res.json();
         })
@@ -22,4 +22,67 @@ useEffect(() => {
           console.error("Something went wrong", error);
       })
   }, []);
-  export default CustomergroupContainer;
+  function populateArtpieces() {
+    console.log(artpieces);
+    return artpieces.map((artpiece, idx) => (
+      <Artpiece artpiece={artpiece} updateArtpiece={updateArtpiece} deleteArtpiece={deleteArtpiece} key={artpiece.id} />
+    ));
+  }
+
+  function createArtpiece(artpiece) {
+    fetch(BASE_URL + "Artpieces", {
+      method: "POST",
+      body: JSON.stringify(artpiece),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((json) => setArtpieces([...artpieces, json]));
+  }
+       
+  function updateArtpiece(artpiece) {
+    fetch(BASE_URL + "artpieces/" + artpiece.id, {
+        method: "PUT",
+        body: JSON.stringify(artpiece),
+        headers: {
+       "Accept": "applicaton/json",
+       "Content-Type": "application/json",
+       },
+    });
+
+    const newArtpieces = Artpieces.map ((p) => {
+        if (p.id === Artpiece.id) {
+            p = Artpiece;
+        }
+        
+        return p;
+    });
+    setArtpieces(newArtpieces);
+    }
+
+function deleteArtpiece(artpiece) {
+    fetch(BASE_URL + "artpieces/" + artpiece.id, {
+      method: "DELETE",
+    });
+    const newArtpieces = artpieces.filter((p) => p.id !== artpiece.id);
+setArtpieces(newArtpieces);
+ }
+
+    return (
+            <div>
+            <h2 className="Artpieces-header">Walk The Art</h2>
+            <h2>Post Your Creation</h2>  
+            <p>See Your Creation In The Walk The Art!</p>
+            <div className="artpieceForm">
+            <ArtpieceForm createArtpiece={createArtpiece} />
+            </div>
+            <div className="artpieces-container">{Artpieces && populateArtpieces()}</div>
+          
+        </div>
+    );
+  
+}
+
+export default ArtpieceContainer;
