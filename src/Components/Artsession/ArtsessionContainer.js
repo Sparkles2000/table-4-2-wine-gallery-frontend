@@ -1,10 +1,10 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import {BASE_URL} from  "../constraints/index.js";
-// import artsession from './artsession';
-// import artsessionForm from './artsessionForm';
+import artsession from './artsession';
+import artsessionForm from './artsessionForm';
 
-function artsessionContainer() {
+function ArtsessionContainer() {
     const [artsessions, setArtsessions] = useState([]);
 
 useEffect(() => {
@@ -22,5 +22,68 @@ useEffect(() => {
           console.error("Something went wrong", error);
       })
   }, []);
+
+  function populateArtsessions() {
+    console.log(artsessions);
+    return artsessions.map((artsession, idx) => (
+      <artsession artsession={artsession} updateArtsession={updateArtsession} deleteArtsession={deleteArtsession} key={artsession.id} />
+    ));
+  }
+
+  function createArtsession(artsession) {
+    fetch(BASE_URL + "artsessions", {
+      method: "POST",
+      body: JSON.stringify(artsession),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((json) => setArtsessions([...artsessions, json]));
+  }
+       
+  function updateArtsession(artsession) {
+    fetch(BASE_URL + "artsessions/" + artsession.id, {
+        method: "PUT",
+        body: JSON.stringify(artsession),
+        headers: {
+       "Accept": "applicaton/json",
+       "Content-Type": "application/json",
+       },
+    });
+
+    const newArtsessions = artsessions.map ((a) => {
+        if (a.id === artsession.id) {
+            a = artsession;
+        }
+        
+        return a;
+    });
+    setArtsessions(newArtsessions);
+    }
+
+function deleteArtsession(artsession) {
+    fetch(BASE_URL + "artsessions/" + artsession.id, {
+      method: "DELETE",
+    });
+    const newArtsessions = artsessions.filter((a) => a.id !== artsession.id);
+setArtsessions(newArtsessions);
+ }
+
+    return (
+            <div>
+            <h2 className="artsessions-header">Customer Group</h2>
+            <h2>Choose A Session</h2>  
+            <p>Pick the session that best fits your needs today!</p>
+            <div className="artsessionForm">
+            <ArtsessionForm createArtsession={createArtsession} />
+            </div>
+            <div className="artsessions-container">{artsessions && populateArtsessions()}</div>
+          
+        </div>
+    );
+  
+}
 
   export default ArtsessionContainer;
