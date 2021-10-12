@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Artpiece({Artpiece, updateArtpiece, deleteArtpiece, initialDelay=0}) {
+function Artpiece({artpiece, updateArtpiece, deleteArtpiece, initialDelay=0}) {
 
 
     const [newArtpiece, setNewArtpiece] = useState({...Artpiece});
@@ -38,15 +38,16 @@ function Artpiece({Artpiece, updateArtpiece, deleteArtpiece, initialDelay=0}) {
     
 
 return(
-  <div className="Artpiece-container">
-    <div className="Artpiece-card">  
-    <Link to={`/Artpieces/${Artpiece.id}`}>
-        <p>Customer Group Party: {Artpiece.Artists}</p>
+  <div className="artpiece-container">
+    <div className="artpiece-card">  
+    <Link to={`/artpieces/${artpiece.id}`}>
+        <p>Artists Names: {artpiece.artists}</p>
       </Link>
-      <p>Party Quantity:  {Artpiece.artists}, Artstyle: {Artpiece.artstyle}, Image: {img_url}</p>
+      <p>Piece Title:  {artpiece.piece}, Artstyle: {artpiece.artstyle}</p>
+      <img src={artpiece.img_src} alt={`${artpiece.img_src}`} width="90%"/>
       {editMode && (
         <>
-          <button onClick={() => deleteArtpiece(Artpiece)}>Delete</button>
+          <button onClick={() => deleteArtpiece(artpiece)}>Delete</button>
 
           <form onSubmit={handleUpdate}>
             <input name="Artists" value={newArtpiece.artists} onChange={handleChange} />

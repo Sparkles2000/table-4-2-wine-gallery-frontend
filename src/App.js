@@ -8,10 +8,10 @@ import BrandofwineContainer from './Components/Brandofwine/BrandofwineContainer'
 import BrandofwineInfo from './Components/Brandofwine/BrandofwineInfo';
 import ArtsessionContainer from './Components/Artsession/ArtsessionContainer';
 import ArtsessionInfo from './Components/Artsession/ArtsessionInfo';
-// import ArtpieceContainer from './Components/ArtPiece/ArtpieceContainer;
-// import ArtpieceInfo from './Components/ArtPiece/ArtpieceInfo;
-// import WinepurchaseContainer from './Components/Winepurchase/WinpurchaseContainer;
-// import WinepurchaseInfo from './Components/Winepurchase/WinepurchaseInfo;
+import ArtpieceContainer from './Components/Artpiece/ArtpieceContainer';
+import ArtpieceInfo from './Components/Artpiece/ArtpieceInfo';
+import WinepurchaseContainer from './Components/Winepurchase/WinepurchaseContainer';
+import WinepurchaseInfo from './Components/Winepurchase/WinepurchaseInfo';
 import './App.css';
 
 
@@ -46,7 +46,7 @@ function App() {
         <Route path="/artsessions/:id">
         <ArtsessionInfo />
         </Route>
-        {/*<Route exact path="/artpieces">
+        <Route exact path="/artpieces">
         <ArtpieceContainer />
         </Route>
         <Route path="/artpieces/:id">
@@ -57,7 +57,7 @@ function App() {
         </Route>
         <Route path="/winepurchases/:id">
         <WinepurchaseInfo />
-        </Route> */}
+        </Route>
         </Switch>
       </header> 
     </div>

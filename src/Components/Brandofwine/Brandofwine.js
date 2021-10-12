@@ -51,13 +51,13 @@ return(
           <button onClick={() => deleteBrandofwine(brandofwine)}>Delete</button>
 
           <form onSubmit={handleUpdate}>
-            <input name="brand" value={newBrandofwine.brand} onChange={handleChange} />
-            <input name="age" value={newBrandofwine.winetype} onChange={handleChange} />
-            <input name="winetype" value={newBrandofwine.price} onChange={handleChange} />
-            <input name="price" value={newBrandofwine.drysweet} onChange={handleChange} />
-            <input name="drysweet" value={newBrandofwine.drysweet} onChange={handleChange} />
-            <input name="alcoholcontent" value={newBrandofwine.alcoholcontent} onChange={handleChange} />
-            <input name="image" value={newBrandofwine.img_src} onChange={handleChange} />
+            <input name="Brand" value={newBrandofwine.brand} onChange={handleChange} />
+            <input name="Age" value={newBrandofwine.winetype} onChange={handleChange} />
+            <input name="Winetype" value={newBrandofwine.price} onChange={handleChange} />
+            <input name="Price" value={newBrandofwine.drysweet} onChange={handleChange} />
+            <input name="Drysweet" value={newBrandofwine.drysweet} onChange={handleChange} />
+            <input name="Alcoholcontent" value={newBrandofwine.alcoholcontent} onChange={handleChange} />
+            <input name="Image" value={newBrandofwine.img_src} onChange={handleChange} />
             <button type="submit">Update</button>
           </form>
         </>

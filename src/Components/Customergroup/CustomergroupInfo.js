@@ -8,7 +8,7 @@ function CustomergroupInfo() {
     const { id } = useParams();
   
     useEffect(() => {
-      fetch(BASE_URL + 'customergroups/id')
+      fetch(BASE_URL + 'customergroups/' + id)
         .then((res) => res.json())
         .then((json) => setCustomergroup(json));
     }, [id]);

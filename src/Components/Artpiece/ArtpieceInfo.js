@@ -8,7 +8,7 @@ function ArtpieceInfo() {
     const { id } = useParams();
   
     useEffect(() => {
-      fetch(BASE_URL + 'artpieces/id')
+      fetch(BASE_URL + 'artpieces/' + id)
         .then((res) => res.json())
         .then((json) => setArtpiece(json));
     }, [id]);

@@ -52,9 +52,9 @@ useEffect(() => {
        },
     });
 
-    const newArtpieces = Artpieces.map ((p) => {
-        if (p.id === Artpiece.id) {
-            p = Artpiece;
+    const newArtpieces = artpieces.map ((p) => {
+        if (p.id === artpiece.id) {
+            p = artpiece;
         }
         
         return p;
@@ -78,7 +78,7 @@ setArtpieces(newArtpieces);
             <div className="artpieceForm">
             <ArtpieceForm createArtpiece={createArtpiece} />
             </div>
-            <div className="artpieces-container">{Artpieces && populateArtpieces()}</div>
+            <div className="artpieces-container">{artpieces && populateArtpieces()}</div>
           
         </div>
     );

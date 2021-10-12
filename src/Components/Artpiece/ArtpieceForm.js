@@ -25,10 +25,10 @@ function ArtpieceForm({createArtpiece}) {
     <label className='form-label'>Name Of Piece</label>
     <input type="text" placeholder='Type Piece Name Here' required value={ piece }onChange={(e) => setPiece(e.target.value)} />
 
-    <label className='form-label'>Piece</label>
+    <label className='form-label'>Artstyle</label>
     <input type="text" placeholder='Type The Artstyle Here' required value={ artstyle } onChange={(e) => setArtstyle(e.target.value)} />
 
-    <label className="form-label">Image Title</label>
+    <label className="form-label">Image</label>
     <input type="text" placeholder='Type The Image File Here' value={ img_src }onChange={(e) => setImg_src(e.target.value)} />
 
 <button>Submit</button>
