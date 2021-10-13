@@ -11,7 +11,7 @@ useEffect(() => {
     fetch(BASE_URL + "winepurchases")
       .then(res => {
           if (!res.ok) {
-              throw Error('could not fetch customer groups');
+              throw Error('could not fetch Wine Purchase');
           }
           return res.json();
         })

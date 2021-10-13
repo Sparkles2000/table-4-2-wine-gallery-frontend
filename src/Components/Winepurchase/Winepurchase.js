@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Winepurchase({winepurchase, updateWinepurchase, deleteWinepurchase, initialDelay=0}) {
+function Winepurchase({winepurchase, updateWinepurchase, initialDelay=0}) {
 
 
     const [newWinepurchase, setNewWinepurchase] = useState({...winepurchase});
