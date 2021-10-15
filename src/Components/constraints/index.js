@@ -1,1 +1,1 @@
-export const BASE_URL = process.env.NODE_ENV === "development" ? "http://localhost:3000/" : 'https://table-4-2-wine-gallery.herokuapp.com/'
+'https://table-4-2-wine-gallery.herokuapp.com/'
