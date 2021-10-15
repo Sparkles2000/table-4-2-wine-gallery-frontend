@@ -39,7 +39,7 @@ function Brandofwine({brandofwine, updateBrandofwine, deleteBrandofwine, initial
     
 
 return(
-  <div className="branofwine-container">
+  <div className="all-containers">
     <div className="brandofwine-card">
     <Link to={`/brandofwines/${brandofwine.id}`}>
         <p>Brand Name: {brandofwine.brand}</p>
@@ -48,16 +48,15 @@ return(
       <img src={brandofwine.img_src} alt={`${brandofwine.img_src}`} width="90%"/>
       {editMode && (
         <>
-          <button onClick={() => deleteBrandofwine(brandofwine)}>Delete</button>
-
           <form onSubmit={handleUpdate}>
-            <input name="Brand" value={newBrandofwine.brand} onChange={handleChange} />
-            <input name="Age" value={newBrandofwine.winetype} onChange={handleChange} />
-            <input name="Winetype" value={newBrandofwine.price} onChange={handleChange} />
-            <input name="Price" value={newBrandofwine.drysweet} onChange={handleChange} />
-            <input name="Drysweet" value={newBrandofwine.drysweet} onChange={handleChange} />
-            <input name="Alcoholcontent" value={newBrandofwine.alcoholcontent} onChange={handleChange} />
-            <input name="Image" value={newBrandofwine.img_src} onChange={handleChange} />
+            <input name="brand" value={newBrandofwine.brand} onChange={handleChange} />
+            <input name="age" value={newBrandofwine.age} onChange={handleChange} />
+            <input name="winetype" value={newBrandofwine.winetype} onChange={handleChange} />
+            <input name="price" value={newBrandofwine.price} onChange={handleChange} />
+            <input name="drysweet" value={newBrandofwine.drysweet} onChange={handleChange} />
+            <input name="alcoholcontent" value={newBrandofwine.alcoholcontent} onChange={handleChange} />
+            <input name="image" value={newBrandofwine.img_src} onChange={handleChange} />
+            <button onClick={() => deleteBrandofwine(brandofwine)}>Delete</button>
             <button type="submit">Update</button>
           </form>
         </>

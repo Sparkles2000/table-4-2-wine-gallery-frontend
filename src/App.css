@@ -1,20 +1,21 @@
 .App {
   text-align: center;
+  background:url(./table-4-2-logo.jpg) fixed center; opacity: 60%;
+  background-size: contain;
+  background-image: cover;
 }
 
 .App-header {
-  background:url(./table-4-2-logo.jpg) fixed center;
-  background-size: contain;
-  background-image: cover; 
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row wrap;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  forced-color-adjust: white;
 }
-
 .App-link {
   color: #61dafb;
 }

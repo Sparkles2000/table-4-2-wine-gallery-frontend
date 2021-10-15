@@ -72,7 +72,7 @@ useEffect(() => {
     }
     
         return (
-            <div>
+            <div className="all-containers">
             <h2 className="brandofwine-header">Brand Of Wines</h2>
             <h2>Add A New Brand Of Wine</h2>
             <p>Enjoy Our Huge Selection Of Popular Wines!</p>

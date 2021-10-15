@@ -45,8 +45,7 @@ function BrandofwineForm({createBrandofwine}) {
 
                         <button>Submit</button>
                         <br />
-                        <p>Brand: { brand }, Age: { age }, Wine Type: { winetype }, Price: { price }, Dry Or Sweet: { drysweet }, Alcohol Content: { alcoholcontent }</p>
-                        <p>Wine Image: { img_src }</p>
+                        <p>Brand: { brand }, Age: { age }, Wine Type: { winetype }, Price: { price }, Dry Or Sweet: { drysweet }, Alcohol Content: { alcoholcontent }, Wine Image: { img_src }</p>
             </form>
            
         </div>

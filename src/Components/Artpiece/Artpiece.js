@@ -38,13 +38,12 @@ function Artpiece({artpiece, updateArtpiece, deleteArtpiece, initialDelay=0}) {
     
 
 return(
-  <div className="artpiece-container">
+  <div className="all-containers">
     <div className="artpiece-card">  
     <Link to={`/artpieces/${artpiece.id}`}>
         <p>Artists Names: {artpiece.artists}</p>
       </Link>
-      <p>Piece Title:  {artpiece.piece}, Artstyle: {artpiece.artstyle}</p>
-      <img src={artpiece.img_src} alt={`${artpiece.img_src}`} width="90%"/>
+      <p>Piece Title:  {artpiece.piece}, Artstyle: {artpiece.artstyle}, <img src={artpiece.img_src} alt={`${artpiece.img_src}`} width="90%"/></p>
       {editMode && (
         <>
           <button onClick={() => deleteArtpiece(artpiece)}>Delete</button>

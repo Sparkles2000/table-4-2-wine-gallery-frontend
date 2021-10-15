@@ -30,7 +30,7 @@ useEffect(() => {
   }
 
   function createArtpiece(artpiece) {
-    fetch(BASE_URL + "Artpieces", {
+    fetch(BASE_URL + `customergroups/id/artsessions/id/artpieces`, {
       method: "POST",
       body: JSON.stringify(artpiece),
       headers: {
@@ -43,7 +43,7 @@ useEffect(() => {
   }
        
   function updateArtpiece(artpiece) {
-    fetch(BASE_URL + "artpieces/" + artpiece.id, {
+    fetch(BASE_URL + "customergroups/id/artsessions/id/artpieces/" + artpiece.id, {
         method: "PUT",
         body: JSON.stringify(artpiece),
         headers: {
@@ -63,7 +63,7 @@ useEffect(() => {
     }
 
 function deleteArtpiece(artpiece) {
-    fetch(BASE_URL + "artpieces/" + artpiece.id, {
+    fetch(BASE_URL + "customergroups/id/artsessions/id/artpieces/" + artpiece.id, {
       method: "DELETE",
     });
     const newArtpieces = artpieces.filter((p) => p.id !== artpiece.id);
@@ -71,14 +71,14 @@ setArtpieces(newArtpieces);
  }
 
     return (
-            <div>
+            <div className="all-containers">
             <h2 className="Artpieces-header">Walk The Art</h2>
             <h2>Post Your Creation</h2>  
             <p>See Your Creation In The Walk The Art!</p>
             <div className="artpieceForm">
             <ArtpieceForm createArtpiece={createArtpiece} />
             </div>
-            <div className="artpieces-container">{artpieces && populateArtpieces()}</div>
+            <div className="artpiece-container">{artpieces && populateArtpieces()}</div>
           
         </div>
     );

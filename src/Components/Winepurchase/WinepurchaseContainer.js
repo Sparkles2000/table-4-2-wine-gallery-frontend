@@ -5,7 +5,7 @@ import Winepurchase from './Winepurchase';
 import WinepurchaseForm from './WinepurchaseForm';
 
 function WinepurchaseContainer() {
-    const [winepurchases, setwinepurchases] = useState([]);
+    const [winepurchases, setWinepurchases] = useState([]);
 
 useEffect(() => {
     fetch(BASE_URL + "winepurchases")
@@ -16,7 +16,7 @@ useEffect(() => {
           return res.json();
         })
       .then(json => {
-          setwinepurchases(json);
+          setWinepurchases(json);
       })
       .catch(error => {
           console.error("Something went wrong", error);
@@ -26,7 +26,7 @@ useEffect(() => {
   function populateWinepurchases() {
     console.log(winepurchases);
     return winepurchases.map((winepurchase, idx) => (
-      <Winepurchase winepurchase={winepurchase} updatewinepurchase={updateWinepurchase} key={winepurchase.id} />
+      <Winepurchase winepurchase={winepurchase} updateWinepurchase={updateWinepurchase} key={winepurchase.id} />
     ));
   }
 
@@ -40,7 +40,7 @@ useEffect(() => {
       },
     })
       .then((res) => res.json())
-      .then((json) => setwinepurchases([...winepurchases, json]));
+      .then((json) => setWinepurchases([...winepurchases, json]));
   }
        
   function updateWinepurchase(winepurchase) {
@@ -64,14 +64,14 @@ useEffect(() => {
     }
 
     return (
-            <div>
+            <div className="all-containers">
             <h2 className="winepurchases-header">Pur</h2>
             <h2>Create Your Account Below</h2>  
             <p>The Perfect Getaway For The Day!</p>
             <div className="winepurchaseForm">
             <WinepurchaseForm createWinepurchase={createWinepurchase} />
             </div>
-            <div className="winepurchases-container">{winepurchases && populateWinepurchases()}</div>
+            <div className="winepurchase-container">{winepurchases && populateWinepurchases()}</div>
           
         </div>
     );

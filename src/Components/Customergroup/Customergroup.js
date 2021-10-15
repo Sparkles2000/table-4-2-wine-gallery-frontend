@@ -38,7 +38,7 @@ function Customergroup({customergroup, updateCustomergroup, deleteCustomergroup,
     
 
 return(
-  <div className="customergroup-container">
+  <div className="all-containers">
     <div className="customergroup-card">  
     <Link to={`/customergroups/${customergroup.id}`}>
         <p>Customer Group Party: {customergroup.party}</p>

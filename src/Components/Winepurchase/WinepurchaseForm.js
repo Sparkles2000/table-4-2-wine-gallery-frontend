@@ -5,6 +5,7 @@ function WinepurchaseForm({createWinepurchase}) {
 
     const [purchasepackage, setPurchasepackage] = useState("");
     const [purchased, setPurchased] = useState("");
+    const winepurchase = {purchasepackage, purchased};
   
     const handleSubmit = (e) => {
         e.preventDefault();

@@ -22,7 +22,6 @@ useEffect(() => {
           console.error("Something went wrong", error);
       })
   }, []);
-
   function populateCustomergroups() {
     console.log(customergroups);
     return customergroups.map((customergroup, idx) => (
@@ -72,14 +71,14 @@ setCustomergroups(newCustomergroups);
  }
 
     return (
-            <div>
+            <div className="all-containers">
             <h2 className="customergroups-header">Customer Group</h2>
             <h2>Create Your Account Below</h2>  
             <p>The Perfect Getaway For The Day!</p>
             <div className="customergroupForm">
             <CustomergroupForm createCustomergroup={createCustomergroup} />
             </div>
-            <div className="customergroups-container">{customergroups && populateCustomergroups()}</div>
+            <div className="customergroup-container">{customergroups && populateCustomergroups()}</div>
           
         </div>
     );

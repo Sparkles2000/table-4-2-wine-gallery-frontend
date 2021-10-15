@@ -11,7 +11,7 @@ useEffect(() => {
     fetch(BASE_URL + "artsessions")
       .then(res => {
           if (!res.ok) {
-              throw Error('could not fetch Art Session');
+              throw Error('Could not fetch Art Session');
           }
           return res.json();
         })
@@ -22,7 +22,6 @@ useEffect(() => {
           console.error("Something went wrong", error);
       })
   }, []);
-
   function populateArtsessions() {
     console.log(artsessions);
     return artsessions.map((artsession, idx) => (
@@ -31,7 +30,7 @@ useEffect(() => {
   }
 
   function createArtsession(artsession) {
-    fetch(BASE_URL + "artsessions", {
+    fetch(BASE_URL + `customergroups/id/artsessions`, {
       method: "POST",
       body: JSON.stringify(artsession),
       headers: {
@@ -44,7 +43,7 @@ useEffect(() => {
   }
        
   function updateArtsession(artsession) {
-    fetch(BASE_URL + "artsessions/" + artsession.id, {
+    fetch(BASE_URL + "customergroups/id/artsessions/" + artsession.id, {
         method: "PUT",
         body: JSON.stringify(artsession),
         headers: {
@@ -64,14 +63,14 @@ useEffect(() => {
     }
     
     return (
-            <div>
-            <h2 className="artsessions-header">Customer Group</h2>
+            <div className="all-containers">
+            <h2 className="artsessions-header">Art Sessions</h2>
             <h2>Choose A Session</h2>  
             <p>Pick the session that best fits your needs today!</p>
             <div className="artsessionForm">
             <ArtsessionForm createArtsession={createArtsession} />
             </div>
-            <div className="artsessions-container">{artsessions && populateArtsessions()}</div>
+            <div className="artsession-container">{artsessions && populateArtsessions()}</div>
           
         </div>
     );

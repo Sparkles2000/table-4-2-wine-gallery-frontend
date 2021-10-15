@@ -38,7 +38,7 @@ function Winepurchase({winepurchase, updateWinepurchase, initialDelay=0}) {
     
 
 return(
-  <div className="winepurchase-container">
+  <div className="all-containers">
     <div className="winepurchase-card">  
     <Link to={`/winepurchases/${winepurchase.id}`}>
         <p>Customer Package Order: {winepurchase.purchasepackage}</p>

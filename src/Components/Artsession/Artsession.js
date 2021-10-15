@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Artsession({artsession, updateArtsession, deleteArtsession, initialDelay=0}) {
+function Artsession({artsession, updateArtsession, initialDelay=0}) {
 
 
     const [newArtsession, setNewArtsession] = useState({...artsession});
@@ -38,7 +38,7 @@ function Artsession({artsession, updateArtsession, deleteArtsession, initialDela
     
 
 return(
-  <div className="artsession-container">
+  <div className="all-containers">
     <div className="artsession-card">  
     <Link to={`/artsessions/${artsession.id}`}>
         <p>Artsession Details: {artsession.artstyle}</p>
