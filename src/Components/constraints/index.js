@@ -1,1 +1,1 @@
-'https://table-4-2-wine-gallery.herokuapp.com/'
+export const BASE_URL = 'https://table-4-2-wine-gallery.herokuapp.com/'
