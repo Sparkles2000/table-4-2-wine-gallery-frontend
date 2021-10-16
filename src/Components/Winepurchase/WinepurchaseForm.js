@@ -15,7 +15,7 @@ function WinepurchaseForm({createWinepurchase}) {
     return (
         <div>
             
-            <form onSubmit={ handleSubmit } className="winepurchase-form">
+            <form onSubmit={ handleSubmit } className="all-form">
   
     <label className='form-label'>Package Purchased</label>
     <input type="text" placeholder='Type Purchase Here' required value={ purchasepackage }onChange={(e) => setPurchasepackage(e.target.value)} />

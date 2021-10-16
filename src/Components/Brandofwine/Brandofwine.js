@@ -39,8 +39,8 @@ function Brandofwine({brandofwine, updateBrandofwine, deleteBrandofwine, initial
     
 
 return(
-  <div className="all-containers">
-    <div className="brandofwine-card">
+  <div className="all-container">
+    <div className="all-card">
     <Link to={`/brandofwines/${brandofwine.id}`}>
         <p>Brand Name: {brandofwine.brand}</p>
       </Link>

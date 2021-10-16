@@ -17,7 +17,7 @@ function ArtsessionForm({createArtsession}) {
     return (
         <div>
             
-            <form onSubmit={ handleSubmit } className="artsession-form">
+            <form onSubmit={ handleSubmit } className="all-form">
   
     <label className='form-label'>Artstyle</label>
     <input type="text" placeholder='Type The Artstyle Here' required value={ artstyle }onChange={(e) => setArtstyle(e.target.value)} />

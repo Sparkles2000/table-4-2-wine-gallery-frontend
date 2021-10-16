@@ -38,8 +38,8 @@ function Artpiece({artpiece, updateArtpiece, deleteArtpiece, initialDelay=0}) {
     
 
 return(
-  <div className="all-containers">
-    <div className="artpiece-card">  
+  <div className="all-container">
+    <div className="all-card">  
     <Link to={`/artpieces/${artpiece.id}`}>
         <p>Artists Names: {artpiece.artists}</p>
       </Link>

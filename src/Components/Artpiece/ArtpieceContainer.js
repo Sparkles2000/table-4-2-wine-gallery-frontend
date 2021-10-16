@@ -71,14 +71,14 @@ setArtpieces(newArtpieces);
  }
 
     return (
-            <div className="all-containers">
-            <h2 className="Artpieces-header">Walk The Art</h2>
+            <div className="all-container">
+            <h2 className="all-header">Walk The Art</h2>
             <h2>Post Your Creation</h2>  
             <p>See Your Creation In The Walk The Art!</p>
-            <div className="artpieceForm">
+            <div className="all-form">
             <ArtpieceForm createArtpiece={createArtpiece} />
             </div>
-            <div className="artpiece-container">{artpieces && populateArtpieces()}</div>
+            <div className="all-container">{artpieces && populateArtpieces()}</div>
           
         </div>
     );

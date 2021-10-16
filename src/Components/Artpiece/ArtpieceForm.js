@@ -17,7 +17,7 @@ function ArtpieceForm({createArtpiece}) {
     return (
         <div>
             
-            <form onSubmit={ handleSubmit } className="Artpiece-form">
+            <form onSubmit={ handleSubmit } className="all-form">
   
     <label className='form-label'>Artists Names</label>
     <input type="text" placeholder='Type Artists Name Here' required value={ artists }onChange={(e) => setArtists(e.target.value)} />

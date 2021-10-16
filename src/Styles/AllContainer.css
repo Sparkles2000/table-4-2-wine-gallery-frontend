@@ -1,0 +1,10 @@
+.all-container {
+    display: flex;
+  }
+.all-card{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }

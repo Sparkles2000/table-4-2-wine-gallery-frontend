@@ -63,14 +63,14 @@ useEffect(() => {
     }
     
     return (
-            <div className="all-containers">
-            <h2 className="artsessions-header">Art Sessions</h2>
+            <div className="all-container">
+            <h2 className="all-header">Art Sessions</h2>
             <h2>Choose A Session</h2>  
             <p>Pick the session that best fits your needs today!</p>
-            <div className="artsessionForm">
+            <div className="all-form">
             <ArtsessionForm createArtsession={createArtsession} />
             </div>
-            <div className="artsession-container">{artsessions && populateArtsessions()}</div>
+            <div className="all-container">{artsessions && populateArtsessions()}</div>
           
         </div>
     );

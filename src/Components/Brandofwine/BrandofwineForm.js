@@ -20,7 +20,7 @@ function BrandofwineForm({createBrandofwine}) {
     return (
         <div>
             
-            <form onSubmit={ handleSubmit } className="brandofwine-form">
+            <form onSubmit={ handleSubmit } className="all-form">
   
                 <label className='form-label'>Brand</label>
                 <input type="text " placeholder='Type Brand Here' required value={ brand } onChange={(e) => setBrand(e.target.value)} />

@@ -37,7 +37,7 @@ useEffect(() => {
 }, [brandofwine]);
 
         return (
-            <div className="brandofwine-card">
+            <div className="all-card">
             {brandofwine && (
               <>
                 <p>Brand Name: {brandofwine.brand}, Aged Since: {brandofwine.age}, Wine Type: {brandofwine.winetype}, Price: {brandofwine.price}, Dry Or Sweet: {brandofwine.drysweet}, Alcohol Content: {brandofwine.alcoholcontent} <img className="brandofwine-info-image" src={brandofwine.img_src} alt={`${brandofwine.img_src}`} width="90%"/></p>

@@ -72,8 +72,8 @@ useEffect(() => {
     }
     
         return (
-            <div className="all-containers">
-            <h2 className="brandofwine-header">Brand Of Wines</h2>
+            <div className="all-container">
+            <h2 className="all-header">Brand Of Wines</h2>
             <h2>Add A New Brand Of Wine</h2>
             <p>Enjoy Our Huge Selection Of Popular Wines!</p>
             <div className="brandofwineForm">

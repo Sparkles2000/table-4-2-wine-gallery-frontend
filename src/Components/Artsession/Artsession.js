@@ -38,8 +38,8 @@ function Artsession({artsession, updateArtsession, initialDelay=0}) {
     
 
 return(
-  <div className="all-containers">
-    <div className="artsession-card">  
+  <div className="all-container">
+    <div className="all-card">  
     <Link to={`/artsessions/${artsession.id}`}>
         <p>Artsession Details: {artsession.artstyle}</p>
       </Link>

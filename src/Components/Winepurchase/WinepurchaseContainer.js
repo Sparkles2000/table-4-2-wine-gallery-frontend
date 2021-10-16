@@ -64,14 +64,14 @@ useEffect(() => {
     }
 
     return (
-            <div className="all-containers">
-            <h2 className="winepurchases-header">Pur</h2>
+            <div className="all-container">
+            <h2 className="all-header">Pur</h2>
             <h2>Create Your Account Below</h2>  
             <p>The Perfect Getaway For The Day!</p>
             <div className="winepurchaseForm">
             <WinepurchaseForm createWinepurchase={createWinepurchase} />
             </div>
-            <div className="winepurchase-container">{winepurchases && populateWinepurchases()}</div>
+            <div className="all-container">{winepurchases && populateWinepurchases()}</div>
           
         </div>
     );
