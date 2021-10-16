@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background:url(./table-4-2-logo.jpg) fixed center; opacity: 60%;
+  background:url(./table-4-2-logo.jpg) fixed center;
   background-size: contain;
   background-image: cover;
 }
