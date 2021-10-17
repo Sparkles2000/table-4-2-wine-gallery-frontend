@@ -1,17 +1,20 @@
 // import { useHistory } from "react-router-dom";
 import { useState } from "react";
+import '../Styles/All.css';
 
 function ArtpieceForm({createArtpiece}) {
 
-    const [artists, setArtists] = useState("");
-    const [piece, setPiece] = useState("");
-    const [artstyle, setArtstyle] = useState("");
-    const [img_src, setImg_src] = useState("");
-    const Artpiece = {artists, piece, artstyle, img_src};
+    const [artpiece, setArtpiece] = useState({artists:"", piece:"", artstyle:"", img_src:""});
   
+    function handleChange(e) {
+        const updatedValue = {...artpiece}
+        updatedValue[e.target.name] = e.target.value
+        setArtpiece(updatedValue)
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        createArtpiece(Artpiece)
+        createArtpiece(artpiece)
     }
 
     return (
@@ -20,20 +23,18 @@ function ArtpieceForm({createArtpiece}) {
             <form onSubmit={ handleSubmit } className="all-form">
   
     <label className='form-label'>Artists Names</label>
-    <input type="text" placeholder='Type Artists Name Here' required value={ artists }onChange={(e) => setArtists(e.target.value)} />
+    <input name="artists" value={ artpiece.artists }onChange={handleChange} />
 
     <label className='form-label'>Name Of Piece</label>
-    <input type="text" placeholder='Type Piece Name Here' required value={ piece }onChange={(e) => setPiece(e.target.value)} />
+    <input name="piece" value={ artpiece.piece }onChange={handleChange} />
 
     <label className='form-label'>Artstyle</label>
-    <input type="text" placeholder='Type The Artstyle Here' required value={ artstyle } onChange={(e) => setArtstyle(e.target.value)} />
+    <input name="artstyle" value={ artpiece.artstyle } onChange={handleChange} />
 
     <label className="form-label">Image</label>
-    <input type="text" placeholder='Type The Image File Here' value={ img_src }onChange={(e) => setImg_src(e.target.value)} />
-
-<button>Submit</button>
+    <input name="img_src" value={ artpiece.img_src }onChange={handleChange} />
 <br />
-<p>Artists: { artists }, Piece: { piece }, Artstyle: { artstyle }, Image: { img_src }</p>
+<button>Submit</button>
 </form>          
 </div>
     );

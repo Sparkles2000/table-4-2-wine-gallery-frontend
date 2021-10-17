@@ -1,5 +1,6 @@
 // import { useHistory } from "react-router-dom";
 import { useState } from "react";
+import '../Styles/All.css';
 
 function BrandofwineForm({createBrandofwine}) {
 
@@ -42,10 +43,8 @@ function BrandofwineForm({createBrandofwine}) {
 
                 <label className="form-label">Wine Image</label>
                 <input type=" text " placeholder='Type Image Url Here' value={ img_src } onChange={(e) => setImg_src(e.target.value)} />
-
+                <br />
                         <button>Submit</button>
-                        <br />
-                        <p>Brand: { brand }, Age: { age }, Wine Type: { winetype }, Price: { price }, Dry Or Sweet: { drysweet }, Alcohol Content: { alcoholcontent }, Wine Image: { img_src }</p>
             </form>
            
         </div>

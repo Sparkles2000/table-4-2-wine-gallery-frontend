@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import '../Styles/All.css';
 
 function Artpiece({artpiece, updateArtpiece, deleteArtpiece, initialDelay=0}) {
 
@@ -41,7 +42,7 @@ return(
   <div className="all-container">
     <div className="all-card">  
     <Link to={`/artpieces/${artpiece.id}`}>
-        <p>Artists Names: {artpiece.artists}</p>
+        <h3>Artists Names: {artpiece.artists}</h3>
       </Link>
       <p>Piece Title:  {artpiece.piece}, Artstyle: {artpiece.artstyle}, <img src={artpiece.img_src} alt={`${artpiece.img_src}`} width="90%"/></p>
       {editMode && (

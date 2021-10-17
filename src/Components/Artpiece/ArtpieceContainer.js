@@ -1,14 +1,17 @@
 import React from 'react';
+import {useParams} from 'react-router';
 import { useEffect, useState } from 'react';
 import {BASE_URL} from  "../constraints/index.js";
 import Artpiece from './Artpiece';
 import ArtpieceForm from './ArtpieceForm';
+import '../Styles/All.css';
 
 function ArtpieceContainer() {
     const [artpieces, setArtpieces] = useState([]);
+    const { id } = useParams();
 
 useEffect(() => {
-    fetch(BASE_URL + "artpieces")
+    fetch(BASE_URL + `customergroups/${id}/artsessions/${id}/artpieces`)
       .then(res => {
           if (!res.ok) {
               throw Error('could not fetch artpiece');
@@ -21,7 +24,7 @@ useEffect(() => {
       .catch(error => {
           console.error("Something went wrong", error);
       })
-  }, []);
+  }, [id]);
   function populateArtpieces() {
     console.log(artpieces);
     return artpieces.map((artpiece, idx) => (
@@ -30,7 +33,7 @@ useEffect(() => {
   }
 
   function createArtpiece(artpiece) {
-    fetch(BASE_URL + `customergroups/id/artsessions/id/artpieces`, {
+    fetch(BASE_URL + `customergroups/${id}/artsessions/${id}/artpieces`, {
       method: "POST",
       body: JSON.stringify(artpiece),
       headers: {
@@ -43,7 +46,7 @@ useEffect(() => {
   }
        
   function updateArtpiece(artpiece) {
-    fetch(BASE_URL + "customergroups/id/artsessions/id/artpieces/" + artpiece.id, {
+    fetch(BASE_URL + `customergroups/${id}/artsessions/${id}/artpieces/` + artpiece.id, {
         method: "PUT",
         body: JSON.stringify(artpiece),
         headers: {
@@ -63,7 +66,7 @@ useEffect(() => {
     }
 
 function deleteArtpiece(artpiece) {
-    fetch(BASE_URL + "customergroups/id/artsessions/id/artpieces/" + artpiece.id, {
+    fetch(BASE_URL + `customergroups/${id}/artsessions/${id}/artpieces` + id, {
       method: "DELETE",
     });
     const newArtpieces = artpieces.filter((p) => p.id !== artpiece.id);
@@ -71,14 +74,14 @@ setArtpieces(newArtpieces);
  }
 
     return (
-            <div className="all-container">
+            <div className="artpiece-container">
             <h2 className="all-header">Walk The Art</h2>
-            <h2>Post Your Creation</h2>  
+            <h2>Display Your Masterpiece!</h2>  
             <p>See Your Creation In The Walk The Art!</p>
-            <div className="all-form">
+            <div className="allform">
             <ArtpieceForm createArtpiece={createArtpiece} />
             </div>
-            <div className="all-container">{artpieces && populateArtpieces()}</div>
+            <div className="artpiece-container">{artpieces && populateArtpieces()}</div>
           
         </div>
     );

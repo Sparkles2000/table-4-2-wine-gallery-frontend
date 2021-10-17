@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import '../Styles/All.css';
 
 function Artsession({artsession, updateArtsession, initialDelay=0}) {
 
@@ -41,7 +42,7 @@ return(
   <div className="all-container">
     <div className="all-card">  
     <Link to={`/artsessions/${artsession.id}`}>
-        <p>Artsession Details: {artsession.artstyle}</p>
+        <>Artsession Details: {artsession.artstyle}</>
       </Link>
       <p>Price: {artsession.price}, Session Type: {artsession.sessiontype}, Pieces Painted: {artsession.piecespergroup}</p>
       {editMode && (

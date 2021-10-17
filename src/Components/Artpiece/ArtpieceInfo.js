@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../constraints/index.js";
+import '../Styles/All.css';
 
 function ArtpieceInfo() {
     const [artpiece, setArtpiece] = useState(null);

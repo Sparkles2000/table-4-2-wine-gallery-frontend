@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../constraints/index.js";
 import ArtpieceForm from "../Artpiece/ArtpieceForm";
+import '../Styles/All.css';
 
 function ArtsessionInfo() {
     const [artsession, setArtsession] = useState(null);

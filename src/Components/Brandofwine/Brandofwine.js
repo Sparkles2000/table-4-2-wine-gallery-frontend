@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import '../Styles/All.css';
 
 function Brandofwine({brandofwine, updateBrandofwine, deleteBrandofwine, initialDelay=0}) {
 
@@ -42,10 +42,10 @@ return(
   <div className="all-container">
     <div className="all-card">
     <Link to={`/brandofwines/${brandofwine.id}`}>
-        <p>Brand Name: {brandofwine.brand}</p>
+        <h3>Brand Name: {brandofwine.brand}</h3>
       </Link>
-      <p>Aged Since: {brandofwine.age} wine Type: {brandofwine.winetype} Price:  {brandofwine.price} Dry or Sweet: {brandofwine.drysweet} Alcohol Content: {brandofwine.drysweet}</p>
-      <img src={brandofwine.img_src} alt={`${brandofwine.img_src}`} width="90%"/>
+      <p>Aged Since: {brandofwine.age} wine Type: {brandofwine.winetype} Price:  {brandofwine.price} Dry or Sweet: {brandofwine.drysweet} Alcohol Content: {brandofwine.drysweet}</p><br />
+      <img src={brandofwine.img_src} alt={`${brandofwine.img_src}`} width="90%"/><br />
       {editMode && (
         <>
           <form onSubmit={handleUpdate}>

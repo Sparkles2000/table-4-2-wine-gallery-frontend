@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import '../Styles/All.css';
 
 function Customergroup({customergroup, updateCustomergroup, deleteCustomergroup, initialDelay=0}) {
 
@@ -41,7 +42,7 @@ return(
   <div className="all-containers">
     <div className="customergroup-card">  
     <Link to={`/customergroups/${customergroup.id}`}>
-        <p>Customer Group Party: {customergroup.party}</p>
+        <h3>Customer Group Party: {customergroup.party}</h3>
       </Link>
       <p>Party Quantity:  {customergroup.partyquantity}, Customer Status: {customergroup.customerstatus}</p>
       {editMode && (

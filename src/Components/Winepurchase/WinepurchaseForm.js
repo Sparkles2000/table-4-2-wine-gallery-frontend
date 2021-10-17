@@ -1,5 +1,6 @@
 // import { useHistory } from "react-router-dom";
 import { useState } from "react";
+import '../Styles/All.css';
 
 function WinepurchaseForm({createWinepurchase}) {
 
@@ -22,11 +23,9 @@ function WinepurchaseForm({createWinepurchase}) {
 
     <label className='form-label'>Purchase Includes</label>
     <input type="text" placeholder='Type Party Quantitiy Here' required value={ purchased } onChange={(e) => setPurchased(e.target.value)} />
-
-
+    
+    <br />
 <button>Submit</button>
-<br />
-<p>:Purchase Package: { purchasepackage }, purchased: { purchased }</p>
 </form>          
 </div>
     );

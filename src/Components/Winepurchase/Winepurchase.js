@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import '../Styles/All.css';
 
 function Winepurchase({winepurchase, updateWinepurchase, initialDelay=0}) {
 
@@ -41,7 +42,7 @@ return(
   <div className="all-container">
     <div className="all-card">  
     <Link to={`/winepurchases/${winepurchase.id}`}>
-        <p>Customer Package Order: {winepurchase.purchasepackage}</p>
+        <h3>Customer Package Order: {winepurchase.purchasepackage}</h3>
       </Link>
       <p>Purchase includes:  {winepurchase.purchased}</p>
       {editMode && (

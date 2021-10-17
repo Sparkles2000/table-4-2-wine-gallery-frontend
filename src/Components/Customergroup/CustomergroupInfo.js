@@ -4,12 +4,13 @@ import { BASE_URL } from "../constraints/index.js";
 import ArtsessionForm from "../Artsession/ArtsessionForm"
 import WinepurchaseForm from "../Winepurchase/WinepurchaseForm"
 import ArtpieceForm from "../Artpiece/ArtpieceForm"
+import '../Styles/All.css';
 
 function CustomergroupInfo() {
     const [customergroup, setCustomergroup] = useState(null);
   
     const { id } = useParams();
-  
+//  SHOW
     useEffect(() => {
       fetch(BASE_URL + 'customergroups/' + id)
         .then((res) => res.json())
@@ -21,7 +22,7 @@ function CustomergroupInfo() {
           ...artsessionInfo,
           customergroup_id: id,
         };
-    
+      //POST Artsessions
         fetch(BASE_URL + `customergroups/${id}/artsessions`, {
           method: "POST",
           headers: { 'Content-Type': 'application/json' },
@@ -29,7 +30,7 @@ function CustomergroupInfo() {
         })
           .then((res) => res.json())
           .then((json) => {
-            const newCustomergroup = { ...customergroup, artsession: [...customergroup.artsessions, json] };
+            const newCustomergroup = { ...customergroup, artsessions: [...customergroup.artsessions, json] };
             setCustomergroup(newCustomergroup);
           });
       }
@@ -39,8 +40,8 @@ function CustomergroupInfo() {
         ...artpieceInfo,
         customergroup_id: id,
       };
-  
-      fetch(BASE_URL + `customergroups/${id}/artsessions/${id}artpiece`, {
+  // POST
+      fetch(BASE_URL + `customergroups/${id}/artsessions/${id}artpieces`, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newArtpiece),
@@ -58,7 +59,7 @@ function CustomergroupInfo() {
         customergroup_id: id,
       };
   
-      fetch(BASE_URL + `customergroups/${id}/winepurchase`, {
+      fetch(BASE_URL + `customergroups/${id}/winepurchases`, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newWinepurchase),
@@ -75,7 +76,7 @@ function CustomergroupInfo() {
         customergroup_id: id,
       };
   
-      fetch(BASE_URL + `customergroups/${id}/winepurchase/${id}/brandofwine`, {
+      fetch(BASE_URL + `customergroups/${id}/winepurchase/${id}/brandofwines`, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newBrandofwine),
@@ -89,19 +90,44 @@ function CustomergroupInfo() {
   useEffect(() => {
       console.log(customergroup);
   }, [customergroup]);
-    
+
+	const displayArtsession = () => {
+		return customergroup.artsessions.map((artsession) => (
+			<all-card key={`${artsession.id} - ${artsession.artstyle}`} artsession={artsession} />
+  ));
+};
+// const displayArtpiece = () => {
+//   return customergroup.artsession.artpiece.map((artpiece) => (
+//     <all-card key={`${artpiece.id} - ${artpiece.piece}`} artpiece={artpiece} />
+// ));
+// };
+// const displayWinepurchase = () => {
+//   return customergroup.winepurchase.map((winepurchase) => (
+//     <all-card key={`${winepurchase.id} - ${winepurchase.order}`} winepurchase={winepurchase} />
+// ));
+// };
+// const displayBrandofwine = () => {
+//   return customergroup.winepurchase.brandofwine.map((brandofwine) => (
+//     <all-card key={`${brandofwine.id} - ${brandofwine.artstyle}`} brandofwine={brandofwine} />
+// ));
+// };
     return (
       <div>
           {customergroup && (
           <>
-          <p> {customergroup.party}, {customergroup.partyquantity}, {customergroup.customerstatus}</p>  
+          <p> Party: {customergroup.party}, Party Quantity: {customergroup.partyquantity}, Customer Status: {customergroup.customerstatus}</p> 
+
+          {displayArtsession()}
           <h3>Add New Art Session</h3>
             <ArtsessionForm createArtsession={createArtsession} />
+            {/* {displayArtpiece()} */}
             <h3>Add New Art Piece</h3>
-            <ArtpieceForm createArtpiece={createArtpiece} /> 
+            <ArtpieceForm createArtpiece={createArtpiece} />
+            {/* {displayWinepurchase()}  */}
             <h3>Add New Wine Purchase</h3>
             <WinepurchaseForm createWinepurchase={createWinepurchase} />
-            <h3>Add New Art Piece</h3>
+            {/* {displayBrandofwine()} */}
+            <h3>Add New Brand Of Wine</h3>
             <ArtpieceForm createBrandofwine={createBrandofwine} />
           </>
       )}

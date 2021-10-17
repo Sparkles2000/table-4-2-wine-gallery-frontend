@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import {BASE_URL} from  "../constraints/index.js";
 import Customergroup from './Customergroup';
 import CustomergroupForm from './CustomergroupForm';
+import '../Styles/All.css';
 
 function CustomergroupContainer() {
     const [customergroups, setCustomergroups] = useState([]);
@@ -30,7 +31,7 @@ useEffect(() => {
   }
 
   function createCustomergroup(customergroup) {
-    fetch(BASE_URL + "Customergroups", {
+    fetch(BASE_URL + "customergroups", {
       method: "POST",
       body: JSON.stringify(customergroup),
       headers: {

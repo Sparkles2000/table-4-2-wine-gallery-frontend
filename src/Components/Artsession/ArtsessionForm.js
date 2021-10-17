@@ -1,14 +1,16 @@
 // import { useHistory } from "react-router-dom";
 import { useState } from "react";
+import '../Styles/All.css';
 
 function ArtsessionForm({createArtsession}) {
 
-    const [artstyle, setArtstyle] = useState("");
-    const [price, setPrice] = useState("");
-    const [sessiontype, setSessiontype] = useState("");
-    const [piecespergroup, setPiecespergroup] = useState("");
-    const artsession = {artstyle, price, sessiontype, piecespergroup};
+    const [artsession, setArtsession] = useState({artstyle:"", price:"", sessiontype:"", piecespergroup:""});
   
+    function handleChange(e) {
+        const updatedValue = {...artsession}
+        updatedValue[e.target.name] = e.target.value
+        setArtsession(updatedValue)
+    }
     const handleSubmit = (e) => {
         e.preventDefault();
         createArtsession(artsession)
@@ -17,22 +19,21 @@ function ArtsessionForm({createArtsession}) {
     return (
         <div>
             
-            <form onSubmit={ handleSubmit } className="all-form">
+    <form className="all-form" onSubmit={ handleSubmit } >
   
-    <label className='form-label'>Artstyle</label>
-    <input type="text" placeholder='Type The Artstyle Here' required value={ artstyle }onChange={(e) => setArtstyle(e.target.value)} />
+    <label className='form-label'>Artstyle:</label>
+    <input name="artstyle" value={ artsession.artstyle }onChange={handleChange} />
 
-    <label className='form-label'>Price</label>
-    <input type="text" placeholder='Type The Price Here' required value={ price } onChange={(e) => setPrice(e.target.value)} />
+    <label className='form-label'>Price:</label>
+    <input name="price" value={ artsession.price } onChange={handleChange} />
 
-    <label className="form-label">Session Type</label>
-    <input type="text" placeholder='Type The Type Of Session Here' value={ sessiontype }onChange={(e) => setSessiontype(e.target.value)} />
+    <label className="form-label">Session Type:</label>
+    <input name="sessiontype" value={ artsession.sessiontype }onChange={handleChange} />
 
-    <label className="form-label">Pieces Painted</label>
-    <input type="text" placeholder='Type The Amout Of Pieces here' value={ piecespergroup }onChange={(e) => setPiecespergroup(e.target.value)} />
-<button>Submit</button>
-<br />
-<p>Artstyle: { artstyle }, Price: { price }, Session Type: { sessiontype },  Pieces Painted: { piecespergroup }</p>
+    <label className="form-label">Pieces Painted:</label>
+    <input name="piecespergroup" value={ artsession.piecespergroup }onChange={handleChange} />
+    <br />
+    <button>Submit</button>
 </form>          
 </div>
     );

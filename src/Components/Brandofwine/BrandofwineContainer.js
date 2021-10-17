@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import {BASE_URL} from  "../constraints/index.js";
 import Brandofwine from './Brandofwine';
 import BrandofwineForm from './BrandofwineForm';
+import '../Styles/All.css';
 
 function BrandofwineContainer() {
     const [brandofwines, setBrandofwines] = useState([]);

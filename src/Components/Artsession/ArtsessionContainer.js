@@ -1,14 +1,19 @@
 import React from 'react';
+import {useParams} from 'react-router';
 import { useEffect, useState } from 'react';
 import {BASE_URL} from  "../constraints/index.js";
 import Artsession from './Artsession';
 import ArtsessionForm from './ArtsessionForm';
+import '../Styles/All.css';
+
 
 function ArtsessionContainer() {
     const [artsessions, setArtsessions] = useState([]);
+    const { id } = useParams();
 
+    
 useEffect(() => {
-    fetch(BASE_URL + "artsessions")
+    fetch(BASE_URL + `customergroups/${id}/artsessions`)
       .then(res => {
           if (!res.ok) {
               throw Error('Could not fetch Art Session');
@@ -21,7 +26,7 @@ useEffect(() => {
       .catch(error => {
           console.error("Something went wrong", error);
       })
-  }, []);
+  }, [id]);
   function populateArtsessions() {
     console.log(artsessions);
     return artsessions.map((artsession, idx) => (
@@ -30,7 +35,7 @@ useEffect(() => {
   }
 
   function createArtsession(artsession) {
-    fetch(BASE_URL + `customergroups/id/artsessions`, {
+    fetch(BASE_URL + `customergroups/${id}/artsessions`, {
       method: "POST",
       body: JSON.stringify(artsession),
       headers: {
@@ -43,7 +48,7 @@ useEffect(() => {
   }
        
   function updateArtsession(artsession) {
-    fetch(BASE_URL + "customergroups/id/artsessions/" + artsession.id, {
+    fetch(BASE_URL + `customergroups/${id}/artsessions/` + artsession.id, {
         method: "PUT",
         body: JSON.stringify(artsession),
         headers: {
