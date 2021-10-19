@@ -77,7 +77,7 @@ setArtpieces(newArtpieces);
             <div className="ahh-container">
             <h2 className="all-header">Walk The Art</h2>
             <h2>Display Your Masterpiece!</h2>  
-            <p>See Your Creation In The Walk The Art!</p>
+            <h4>See Your Creation In The Walk The Art!</h4>
             <div className="all-form">
             <ArtpieceForm createArtpiece={createArtpiece} />
             </div>

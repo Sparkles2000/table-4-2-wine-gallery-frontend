@@ -75,7 +75,7 @@ setCustomergroups(newCustomergroups);
             <div className="all-containers">
             <h2 className="customergroups-header">Customer Group</h2>
             <h2>Create Your Account Below</h2>  
-            <p>The Perfect Getaway For The Day!</p>
+            <h4>The Perfect Getaway For The Day!</h4>
             <div className="customergroupForm">
             <CustomergroupForm createCustomergroup={createCustomergroup} />
             </div>

@@ -66,9 +66,9 @@ useEffect(() => {
 
     return (
             <div className="all-container">
-            <h2 className="all-header">Pur</h2>
-            <h2>Create Your Account Below</h2>  
-            <p>The Perfect Getaway For The Day!</p>
+            <h2 className="all-header">Wine Purchase</h2>
+            <h2>Make another purchase Here</h2>  
+            <h4>Hope to see you again soon!</h4>
             <div className="winepurchaseForm">
             <WinepurchaseForm createWinepurchase={createWinepurchase} />
             </div>

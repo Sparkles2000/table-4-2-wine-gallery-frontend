@@ -71,7 +71,7 @@ useEffect(() => {
             <div className="all-container">
             <h2 className="all-header">Art Sessions</h2>
             <h2>Choose A Session</h2>  
-            <p>Pick the session that best fits your needs today!</p>
+            <h4>Pick the session that best fits your needs today!</h4>
             <div className="all-form">
             <ArtsessionForm createArtsession={createArtsession} />
             </div>
