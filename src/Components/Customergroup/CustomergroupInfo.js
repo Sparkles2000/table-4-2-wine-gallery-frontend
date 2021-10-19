@@ -115,7 +115,8 @@ function CustomergroupInfo() {
       <div>
           {customergroup && (
           <>
-          <p> Party: {customergroup.party}, Party Quantity: {customergroup.partyquantity}, Customer Status: {customergroup.customerstatus}</p> 
+          <h3> Party: {customergroup.party}</h3>
+          <p>Party Quantity: {customergroup.partyquantity}, Customer Status: {customergroup.customerstatus}</p> 
 
           {displayArtsession()}
           <h3>Add New Art Session</h3>

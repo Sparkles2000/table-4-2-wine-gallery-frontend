@@ -23,13 +23,27 @@
   font-size: calc(10px + 2vmin);
   color: white;
   }
+.home-heading {
+  font-size: 20;
+  color: white;
+  height: 70%;
+}
+  .home-link {
+    display: bottom;
+  }
 
-  h {
+  h1 {
     text-align: center;
   }
 
+.img {
+width: 90%;
+height: 90%;
+}
+
 .all-container {
- min-height: fit-content;
+  height: 50%;
+  width: 50%;
   display: grid;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
   grid-template-rows: 25% 100px auto;
@@ -40,15 +54,17 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .about-img {
-  width: 10%;
+  width: 50%;
   margin-bottom: 2rem;
 }
 .artpiece-container {
- min-height: fit-content;
+  height: 25%;
+  width: 40%;
   display: grid;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
-  grid-template-rows: 25% 100px auto;
+  grid-template-rows: 25%;
   justify-items: stretch;
   flex-direction: row wrap;
   display: inline-block;
@@ -59,23 +75,23 @@
 }
 
 .artpiece-card {
-  min-height: fit-content;
+  height: 90%;
+  width: 90%;
   display: grid;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
-  grid-template-rows: 25% 100px auto;
+  grid-template-rows: 25%;
   justify-items: stretch;
   display: inline-block;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .all-form {
-  min-height: fit-content;
+  height: 25%;
   display: grid;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
-  grid-template-rows: 25% 100px auto;
+  grid-template-rows: 25%;
   justify-items: stretch;
   display: inline-block;
   align-items: center;
@@ -85,18 +101,20 @@
 }
 
 .all-card {
-  min-height: fit-content;
-  min-width: fit-content;
+  height: 90%;
+  width: 90%;
   display: grid;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
-  grid-template-rows: 25% 100px auto;
+  grid-template-rows: 25%;
   justify-items: stretch;
   flex-direction: row wrap;
   display: inline-block;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin);  
   color: white;
+  background-color: rgba(126, 56, 67, 0.6);
+  border-color: maroon;
+  border-style: solid;
 }
 
 h2 {
@@ -111,11 +129,10 @@ h2 {
   font-weight: bold;
   border-color: maroon;
   border-style: solid;
-  display: list-item;
 }
 
 h3 {
-  background-color: rgb(126, 56, 67, 0.6);
+  background-color: rgba(126, 56, 67, 0.6);
   border-width: 5%;
   display: block;
   font-size: 25;
@@ -126,18 +143,42 @@ h3 {
   font-weight: bold;
   border-color: maroon;
   border-style: solid;
-  display: list-item;
+}
+
+h4 {
+  background-color: rgba(126, 56, 67, 0.6);
+  border-width: 5%;
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 5%;
+  margin-inline-end: 5%;
+  font-weight: bold;
+  border-color: maroon;
+  border-style: solid;
 }
 
 .home-container {
-  min-height: 25%;
+  min-height: 100%;
   display: grid;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
-  grid-template-rows: 25% 100px auto;
-  justify-items: row;
+  grid-template-rows: 25%;  justify-items: row;
   display: inline-block;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+}
+
+p {
+  height: 25%;
+  width: 35%;
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 1fr 40px;
+  grid-template-rows: 25% auto;
+  justify-items: stretch;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  font-size: 20;
   color: white;
 }

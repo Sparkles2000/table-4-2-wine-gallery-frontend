@@ -35,5 +35,6 @@ a:-webkit-any-link:hover {
 }
 
 h {
+  font-size: 30%;
   text-align: center;
 }

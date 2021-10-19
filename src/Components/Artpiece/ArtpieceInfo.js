@@ -22,7 +22,8 @@ function ArtpieceInfo() {
       <div>
           {artpiece && (
           <>
-          <p> {artpiece.artists}, {artpiece.piece}, {artpiece.artstyle}, {artpiece.img_src}</p>  
+          <h3> {artpiece.artists}</h3>
+         <p>{artpiece.piece}, {artpiece.artstyle}, {artpiece.img_src}</p>  
           </>
       )}
       </div>

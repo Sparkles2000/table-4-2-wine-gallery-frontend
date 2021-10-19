@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/All.css';
-
+import atoasttous from "./atoasttous.jpg";
 
 function About() {
   return (
     <div className="all-container">
-      <h1 className="all-heading">Table 4 2 Wine Gallery Online Menu And Venue</h1>
-      <h2>This is a Wine Gallery online Menue And Venue meant for online orders of wine and displaying of artworks created from art sessions in the Wine Gallery.
+      <h1 className="all-heading">Table 4 2 Wine Gallery Online Menu And Venue</h1><br />
+      <img className="about-img" alt="Cheers" src={atoasttous} />
+      <h4>This is a Wine Gallery online Menu And Venue meant for online orders of wine and displaying of artworks created from art sessions in the Wine Gallery.
       It is mainly meant for Couples to share a romantic art and wine session with each other although you can also go alone or just with friends.
-      It is a good experience for all.</h2>
+      It is a good experience for all.</h4>
       <h3>Customer Memberships</h3>
       <p>VIP Diamond Elite, VIP Diamond, Preffered, General(Normal admission)</p>
       <h3>Wine Session Purchase Packages</h3>
@@ -55,7 +56,7 @@ Your choice of wine $15 and below and a session. Every session comes with wine.<
 <p>Any Session Basic<br />
 Your choice of wine $10 and below and a session. Every session comes with wine.</p>
 <p>Wine<br />
-Any wine. Price will vary according to the brand and type.</p>
+Any wine. Price will vary according to the brand and type.</p><br />
 
       <Link className="About-link" to="/brandofwines">Show Me More!</Link>
     </div>
