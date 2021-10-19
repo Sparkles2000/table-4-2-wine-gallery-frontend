@@ -44,7 +44,7 @@ return(
     <Link to={`/artpieces/${artpiece.id}`}>
         <h3>Artists Names: {artpiece.artists}</h3>
       </Link>
-      <p>Piece Title:  {artpiece.piece}, Artstyle: {artpiece.artstyle}, <img src={artpiece.img_src} alt={`${artpiece.img_src}`} width="90%"/></p>
+      <p>Piece Title:  {artpiece.piece}, Artstyle: {artpiece.artstyle}<br /> <img src={artpiece.img_src} alt={`${artpiece.img_src}`} width="90%"/></p><br />
       {editMode && (
         <>
           <button onClick={() => deleteArtpiece(artpiece)}>Delete</button>

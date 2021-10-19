@@ -44,7 +44,7 @@ return(
     <Link to={`/winepurchases/${winepurchase.id}`}>
         <h3>Customer Package Order: {winepurchase.purchasepackage}</h3>
       </Link>
-      <p>Purchase includes:  {winepurchase.purchased}</p>
+      <p>Purchase includes:  {winepurchase.purchased}</p><br />
       {editMode && (
         <>
 

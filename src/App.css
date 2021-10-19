@@ -6,7 +6,7 @@
 }
 
 .App-header {
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
   grid-template-rows: 25% 100px auto;

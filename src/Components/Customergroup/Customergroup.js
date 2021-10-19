@@ -44,7 +44,7 @@ return(
     <Link to={`/customergroups/${customergroup.id}`}>
         <h3>Customer Group Party: {customergroup.party}</h3>
       </Link>
-      <p>Party Quantity:  {customergroup.partyquantity}, Customer Status: {customergroup.customerstatus}</p>
+      <p>Party Quantity:  {customergroup.partyquantity}, Customer Status: {customergroup.customerstatus}</p><br />
       {editMode && (
         <>
           <button onClick={() => deleteCustomergroup(customergroup)}>Delete</button>
