@@ -1,5 +1,5 @@
 .all-heading {
- min-height: fit-content;
+  height: fit-content;
   display: grid;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
   grid-template-rows: 25% 100px auto;
@@ -12,7 +12,7 @@
 }
 
 .all-header {
- min-height: fit-content;
+ height: fit-content;
   display: grid;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
   grid-template-rows: 25% 100px auto;
@@ -60,13 +60,12 @@ height: 90%;
   margin-bottom: 2rem;
 }
 .artpiece-container {
-  height: 25%;
-  width: 40%;
+  height: 50%;
+  width: 50%;
   display: grid;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
-  grid-template-rows: 25%;
+  grid-template-rows: 25% 100px auto;
   justify-items: stretch;
-  flex-direction: row wrap;
   display: inline-block;
   align-items: center;
   justify-content: center;
@@ -81,10 +80,14 @@ height: 90%;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
   grid-template-rows: 25%;
   justify-items: stretch;
+  flex-direction: row wrap;
   display: inline-block;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin);  
   color: white;
+  background-color: rgba(126, 56, 67, 0.6);
+  border-color: maroon;
+  border-style: solid;
 }
 
 .all-form {
