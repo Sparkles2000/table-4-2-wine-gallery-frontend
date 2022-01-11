@@ -70,31 +70,14 @@ function CustomergroupInfo() {
           setCustomergroup(newCustomergroup);
         });
     }
-    function createBrandofwine(brandofwineInfo) {
-      const newBrandofwine = {
-        ...brandofwineInfo,
-        customergroup_id: id,
-      };
-  
-      fetch(BASE_URL + `customergroups/${id}/winepurchase/${id}/brandofwines`, {
-        method: "POST",
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newBrandofwine),
-      })
-        .then((res) => res.json())
-        .then((json) => {
-          const newCustomergroup = { ...customergroup.winepurchase, winepurchase: [...customergroup.winepurchase.brandofwine, json] };
-          setCustomergroup(newCustomergroup);
-        });
-    }
   useEffect(() => {
       console.log(customergroup);
   }, [customergroup]);
 
-	const displayArtsession = () => {
+	function displayArtsession () {
 		return customergroup.artsessions.map((artsession) => (
-			<all-card key={`${artsession.id} - ${artsession.artstyle}`} artsession={artsession} />
-  ));
+      			<all-card key={`${artsession.id} - ${artsession.artstyle}`} artsession={artsession} />
+    ));
 };
 // const displayArtpiece = () => {
 //   return customergroup.artsession.artpiece.map((artpiece) => (
@@ -104,11 +87,6 @@ function CustomergroupInfo() {
 // const displayWinepurchase = () => {
 //   return customergroup.winepurchase.map((winepurchase) => (
 //     <all-card key={`${winepurchase.id} - ${winepurchase.order}`} winepurchase={winepurchase} />
-// ));
-// };
-// const displayBrandofwine = () => {
-//   return customergroup.winepurchase.brandofwine.map((brandofwine) => (
-//     <all-card key={`${brandofwine.id} - ${brandofwine.artstyle}`} brandofwine={brandofwine} />
 // ));
 // };
     return (
@@ -127,9 +105,6 @@ function CustomergroupInfo() {
             {/* {displayWinepurchase()}  */}
             <h3>Add New Wine Purchase</h3>
             <WinepurchaseForm createWinepurchase={createWinepurchase} />
-            {/* {displayBrandofwine()} */}
-            <h3>Add New Brand Of Wine</h3>
-            <ArtpieceForm createBrandofwine={createBrandofwine} />
           </>
       )}
       </div>

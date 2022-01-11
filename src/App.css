@@ -5,11 +5,16 @@
   background-image: cover;
 }
 
+/* .parent {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }*/
+
 .App-header {
   height: 100vh;
-  display: grid;
-  grid-template-columns: 40px 1fr 1fr 1fr 40px;
-  grid-template-rows: 25% 100px auto;
   justify-items: stretch;
   display: inline-block;
   align-items: center;
@@ -21,3 +26,18 @@
 .App-link {
   color: rgb(126, 56, 67);
 }
+
+ /* .App-header { grid-area: 1 / 1 / 2 / 8; 
+  height: 100vh;
+  justify-items: stretch;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  }
+
+  .div2 { grid-area: 2 / 7 / 9 / 8; }
+  .div3 { grid-area: 9 / 1 / 10 / 8; }
+  .div4 { grid-area: 2 / 1 / 9 / 2; }
+  .div5 { grid-area: 2 / 2 / 9 / 7; } */

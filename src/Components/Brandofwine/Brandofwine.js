@@ -42,9 +42,9 @@ return(
   <div className="all-container">
     <div className="all-card">
     <Link to={`/brandofwines/${brandofwine.id}`}>
-        <h3>Brand Name: {brandofwine.brand}</h3>
+        <h3> {brandofwine.brand}</h3>
       </Link>
-      <p>Aged Since: {brandofwine.age} wine Type: {brandofwine.winetype} Price:  {brandofwine.price} Dry or Sweet: {brandofwine.drysweet} Alcohol Content: {brandofwine.drysweet}</p><br />
+      <p>Aged Since: {brandofwine.age} wine Type: {brandofwine.winetype} Price:  {brandofwine.price} Dry or Sweet: {brandofwine.drysweet} Alcohol Content: {brandofwine.drysweet} </p><br />
       <img src={brandofwine.img_src} alt={`${brandofwine.img_src}`} width="90%"/><br />
       {editMode && (
         <>

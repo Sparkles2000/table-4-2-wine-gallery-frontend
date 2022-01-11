@@ -143,14 +143,3 @@ h4 {
   font-size: calc(10px + 2vmin);
 }
 
-p {
-  display: grid;
-  grid-template-columns: 40px 1fr 1fr 40px;
-  grid-template-rows: 25%;
-  justify-items: stretch;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  font-size: 15;
-  color: white;
-}
