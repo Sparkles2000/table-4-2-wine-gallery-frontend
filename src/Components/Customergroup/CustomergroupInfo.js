@@ -94,7 +94,8 @@ function CustomergroupInfo() {
           {customergroup && (
           <>
           <h3> Party: {customergroup.party}</h3>
-          <p>Party Quantity: {customergroup.partyquantity}, Customer Status: {customergroup.customerstatus}</p> 
+          <p>Party Quantity: {customergroup.partyquantity},
+          <br /> Customer Status: {customergroup.customerstatus}</p> 
 
           {displayArtsession()}
           <h3>Add New Art Session</h3>

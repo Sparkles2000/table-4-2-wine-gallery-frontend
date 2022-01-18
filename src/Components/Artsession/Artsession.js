@@ -44,7 +44,10 @@ return(
     <Link to={`/artsessions/${artsession.id}`}>
         <>Artsession Details: {artsession.artstyle}</>
       </Link>
-      <p>Price: {artsession.price}, Session Type: {artsession.sessiontype}, Pieces Painted: {artsession.piecespergroup}</p><br />
+      <p>Price: {artsession.price},<br />
+       Session Type: {artsession.sessiontype},<br />
+       Pieces Painted: {artsession.piecespergroup}</p>
+        <br />
       {editMode && (
         <>
           <form onSubmit={handleUpdate}>

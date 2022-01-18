@@ -41,7 +41,10 @@ function ArtsessionInfo() {
       <div>
           {artsession && (
           <>
-          <p>Art Session: {artsession.artstyle}, {artsession.price}, {artsession.sessiontype}, {artsession.piecespergroup}</p>
+          <p>Art Session: {artsession.artstyle},
+          <br /> {artsession.price},
+          <br /> {artsession.sessiontype},
+          <br /> {artsession.piecespergroup}</p>
           <h3>Add New Art Piece</h3>
             <ArtpieceForm createArtpiece={createArtpiece} /> 
           </>

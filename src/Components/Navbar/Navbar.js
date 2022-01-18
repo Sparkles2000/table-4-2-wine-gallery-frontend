@@ -11,9 +11,7 @@ function Navbar() {
                 <Link to="/About">About</Link>
                 <Link to="/customergroups">Customer Group History</Link>
                 <Link to="/brandofwines">Wine Menu</Link>
-                <Link to="/artpieces">Walk The Art</Link>
-                {/* <Link to="/winepurchases">Past Wine Purchase Packages</Link><br/>  */}
-                  
+                <Link to="/artpieces">Walk The Art</Link>       
             </div>
         </nav>
         </div>

@@ -22,7 +22,7 @@ function WinepurcaseInfo() {
       <div>
           {winepurcase && (
           <>
-          <p> {winepurcase.purchasepackage}, {winepurcase.purchased}</p>  
+          <p> {winepurcase.purchasepackage},<br /> {winepurcase.purchased}</p>  
           </>
       )}
       </div>

@@ -44,7 +44,7 @@ return(
     <Link to={`/brandofwines/${brandofwine.id}`}>
         <h3> {brandofwine.brand}</h3>
       </Link>
-      <p>Aged Since: {brandofwine.age} wine Type: {brandofwine.winetype} Price:  {brandofwine.price} Dry or Sweet: {brandofwine.drysweet} Alcohol Content: {brandofwine.drysweet} </p><br />
+      <p>Aged Since: {brandofwine.age}<br /> Wine Type: {brandofwine.winetype}<br /> Price: {brandofwine.price}<br /> Dry or Sweet: {brandofwine.drysweet}<br /> Alcohol Content: {brandofwine.drysweet} </p><br />
       <img src={brandofwine.img_src} alt={`${brandofwine.img_src}`} width="90%"/><br />
       {editMode && (
         <>
